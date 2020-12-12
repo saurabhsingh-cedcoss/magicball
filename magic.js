@@ -7,6 +7,9 @@ var userAns = ["It is certain.", "Don’t count on it.", "It is decidedly so.", 
 var btn = 0;
 var quesNo = 0;
 
+
+    
+
 function welcome() {
     document.getElementById('block').style.display = "none";
 
@@ -18,8 +21,8 @@ function welcome() {
         x.setAttribute("onClick", "askQues()");
         x.setAttribute("id", "wel");
         x.appendChild(t);
-       var con= document.querySelector('.con');
-       con.appendChild(x);
+        var con = document.querySelector('.con');
+        con.appendChild(x);
         btn++;
         var x2 = document.createElement("BUTTON");
         var t2 = document.createTextNode("quit");
@@ -27,14 +30,13 @@ function welcome() {
         x2.setAttribute("id", "quit");
         x2.appendChild(t2);
         con.appendChild(x2);
-        // document.querySelector('.container').style.backgroundImage = " url('wow.jpeg')";
-        document.querySelector('.container').style.backgroundSize = "1400px 700px";
+        document.querySelector('.container').style.backgroundImage = " url('wow.jpeg')";
+        // document.querySelector('.container').style.backgroundSize = "1400px 700px";
         document.getElementById('s1').innerHTML = "welcome " + userName;
         document.getElementById('s2').innerHTML = "press continue to get next question !!! ";
     }
 }
 function askQues() {
-
     if (quesNo < userQues.length) {
 
         document.getElementById('s1').innerHTML = userQues[quesNo];
